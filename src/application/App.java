@@ -6,8 +6,6 @@ import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.Parent;
 import javafx.fxml.FXMLLoader;
 
 
