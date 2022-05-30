@@ -29,17 +29,17 @@ public class MainViewController implements Initializable {
 
     @FXML
     public void onMenuItemSellerAction(){
-        System.out.println("Seller!");
+        System.out.println("Seller!");     //Quando clicar em Seller
     }
 
     @FXML
     public void onMenuItemDepartmentAction(){
-        System.out.println("Department!");
+        loadView("/gui/DepartmentList.fxml"); //Quando clicar Department
     }
 
     @FXML
     public void onMenuItemAboutAction(){
-        loadView("/gui/About.fxml");
+        loadView("/gui/About.fxml"); //Quando clicar em About
     }
 
 
@@ -48,7 +48,7 @@ public class MainViewController implements Initializable {
     public void initialize(URL uri, ResourceBundle rb) {
     }
 
-    private synchronized void loadView(String absoluteName){
+    private synchronized void loadView(String absoluteName){  //FAZ A MUDANÇA DE TELA
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
             VBox newVbox = loader.load();
