@@ -10,4 +10,14 @@ public class Utils {
         return (Stage) ((Node)event.getSource()).getScene().getWindow();
     }
     
+    public static Integer tryParseToInt(String str){    //função que transforma string em int, porém caso seja inválido, returna null.
+        try{
+            return Integer.parseInt(str);
+        }
+        catch(NumberFormatException e){
+            return null;
+        }
+        
+    }
+
 }
