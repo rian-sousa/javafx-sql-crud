@@ -110,27 +110,27 @@ public class SellerListController implements Initializable, DataChangeListener {
     }
 
     private void createDialogForm(Seller obj, String absoluteName, Stage parentStage){
-        // try {
-        //     FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
-        //     Pane pane = loader.load();
+         try {
+             FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
+             Pane pane = loader.load();
 
-        //     SellerFormController controller = loader.getController(); //pegar referencia p/ controlador
-        //     controller.setSeller(obj);
-        //     controller.setSellerServices(new SellerServices());
-        //     controller.subscribeDataChangeListener(this);  //habilitando o listener/observer p/ esssa classe
-        //     controller.updateFormData();
+             SellerFormController controller = loader.getController(); //pegar referencia p/ controlador
+             controller.setSeller(obj);
+             controller.setSellerServices(new SellerServices());
+             controller.subscribeDataChangeListener(this);  //habilitando o listener/observer p/ esssa classe
+             controller.updateFormData();
 
-        //     Stage dialogStage = new Stage();
-        //     dialogStage.setTitle("Enter Seller data");
-        //     dialogStage.setScene(new Scene(pane));
-        //     dialogStage.setResizable(false);
-        //     dialogStage.initOwner(parentStage); //quem que é o stage pai da janela? parentStage
-        //     dialogStage.initModality(Modality.WINDOW_MODAL); //enquanto não fechar a janela n é possível mexer na tela anterior
-        //     dialogStage.showAndWait();
+             Stage dialogStage = new Stage();
+             dialogStage.setTitle("Enter Seller data");
+             dialogStage.setScene(new Scene(pane));
+             dialogStage.setResizable(false);
+             dialogStage.initOwner(parentStage); //quem que é o stage pai da janela? parentStage
+             dialogStage.initModality(Modality.WINDOW_MODAL); //enquanto não fechar a janela n é possível mexer na tela anterior
+             dialogStage.showAndWait();
             
-        // } catch (IOException e) {
-        //     Alerts.showAlert("IO Excepetion", "Error loading view", e.getMessage(), AlertType.ERROR);
-        // }
+         } catch (IOException e) {
+             Alerts.showAlert("IO Excepetion", "Error loading view", e.getMessage(), AlertType.ERROR);
+         }
     }
 
     @Override
