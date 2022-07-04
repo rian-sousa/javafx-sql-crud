@@ -29,6 +29,16 @@ public class Utils {
         }
         
     }
+
+    public static Double tryParseToDouble(String str){    //função que transforma string em int, porém caso seja inválido, returna null.
+        try{
+            return Double.parseDouble(str);
+        }
+        catch(NumberFormatException e){
+            return null;
+        }
+        
+    }
    
     public static <T> void formatTableColumnDate(TableColumn<T, Date> tableColumn, String format) {
         tableColumn.setCellFactory(column -> {
